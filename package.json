@@ -12,6 +12,7 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-slim": "*",
-    "grunt-contrib-coffee": "*"
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-handlebars": "*"
   }
 }

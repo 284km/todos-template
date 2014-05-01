@@ -1,14 +1,14 @@
 define([
     'jquery',
     'underscore',
-    'backbone'
+    'backbone',
+    'handlebars',
+    'templates/item'
     ],
-    function($, _, Backbone) {
+    function($, _, Backbone, Handlebars, templateItem) {
       return Backbone.View.extend({
         tagName:  "li",
-
-        // Cache the template function for a single item.
-        template: _.template($('#item-template').html()),
+        template: JST.item,
 
         // The DOM events specific to an item.
         events: {

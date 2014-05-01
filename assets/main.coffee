@@ -4,6 +4,7 @@ require.config
     underscore: 'vendor/underscore/underscore',
     backbone: 'vendor/backbone/backbone',
     'backbone.localStorage' : 'vendor/backbone.localStorage/backbone.localStorage',
+    'handlebars' : 'vendor/handlebars/handlebars',
   shim:
     underscore:
       exports: '_'

@@ -4,7 +4,8 @@
       jquery: 'vendor/jquery/dist/jquery',
       underscore: 'vendor/underscore/underscore',
       backbone: 'vendor/backbone/backbone',
-      'backbone.localStorage': 'vendor/backbone.localStorage/backbone.localStorage'
+      'backbone.localStorage': 'vendor/backbone.localStorage/backbone.localStorage',
+      'handlebars': 'vendor/handlebars/handlebars'
     },
     shim: {
       underscore: {
@@ -25,7 +26,6 @@
       router: router,
       collection: todolist
     });
-
     return $(function() {
       $('body').append(appview.render().el);
       return Backbone.history.start({

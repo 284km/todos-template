@@ -10,7 +10,8 @@
     "jquery": "latest",
     "backbone": "latest",
     "underscore": "latest",
-    "backbone.localStorage": "latest"
+    "backbone.localStorage": "latest",
+    "handlebars": "latest"
   },
   "devDependencies": {
     "mocha": "latest",

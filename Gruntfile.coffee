@@ -31,12 +31,20 @@ module.exports = (grunt) ->
           'views/index.html': 'views/index.slim',
           'views/test.html': 'views/test.slim',
 
+    handlebars:
+      build:
+        options:
+          namespace: "JST"
+          processName: (filename) ->
+            (/\/([a-zA-Z1-9-]+)\.html$/.exec(filename))[1]
+        files:
+          "public/js/templates/item.js": ["views/templates/item.html"]
+
     watch:
       options:
         livereload: true
     livereload:
-      port: 35729
-
+      port: 35729 
     regarde:
       coffee:
         files: 'assets/*.coffee'
@@ -56,8 +64,10 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-slim'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-handlebars'
 
   grunt.registerTask 'default', [
     'slim',
-    'coffee'
+    'coffee',
+    'handlebars',
   ]
