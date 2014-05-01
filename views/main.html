@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>boilerplate</title>
+
+    <script>
+      (function () {
+        var s = document.getElementsByTagName('script')[0];
+        var e = function (src, main) {
+          var el = document.createElement('script')
+//          el.src = 'assets/js/' + src;
+          el.src = src;
+          main && el.setAttribute('data-main', main);
+          s.parentNode.insertBefore(el, s);
+        };
+
+        e('require.config.js');
+//        e('vendor/require-2.1.2.js', 'pc');
+        e('/js/vendor/requirejs/require.js', '/js/main');
+
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
